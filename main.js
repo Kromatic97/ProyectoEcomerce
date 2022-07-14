@@ -1,3 +1,4 @@
+
 const arrayProducts = [
     {
       id: 1,
@@ -189,5 +190,5 @@ function openAndCloseCards() {
 function contadorCarrito() {
     const amount=document.querySelector("#amount");
     amount.textContent=Object.entries(sales).length;
-}
+};
 

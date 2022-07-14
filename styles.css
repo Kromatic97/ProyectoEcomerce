@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
-    padding:0 1em;
-}
+
 
 :root {
     --header-height: 3.5rem;
@@ -41,18 +39,23 @@ body{
     --z-fixed: 100;
 }
 
+
 .contenedor_cabecera{
+    position: fixed;
     width: 100%;
     height: 70px;
+    top:0;
     padding: 5px;
     background-color:var(--body-color);
     display: flex;
     gap:3em;
     justify-content: space-between;
-    position: fixed;
-    z-index: 300;
+   
+   
    
 }
+
+
 
 .logo{
     display: flex;
@@ -138,15 +141,36 @@ body{
 
 .content_total{
     height: 20%;
-    background-color: green;
+    background-color:var(--body-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .btn_comprar{
     background-color: var(--first-color);
     padding: 1em;
     border: none;
-    border-radius: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
 }
+
+.btn_comprar:active{
+    transform: scale(0.9); 
+}
+
+.btn_comprar:hover{
+   color: #fff;
+}
+
+.content_total p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
 /* las tarjetitas */
 
 .shopping_header{
@@ -191,6 +215,7 @@ body{
 .home{
     background-color: aqua;
     width: 950px;
+    margin-top: 90px;
 }
 
 
@@ -322,7 +347,7 @@ font-family: var(--body-font);
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-columns: repeat(auto-fit, minmax (250px, 1fr)); */
+    
     justify-items: center;
     align-items: center;
     flex-wrap: wrap;
@@ -474,4 +499,61 @@ gap:1em;
     align-items: center;
     justify-content: center;
     color: var(--text-color-light);
+}
+
+
+@media (max-width:600px){
+    .products_container{
+    width: 600px;
+    height: 800px;
+   
+        
+    }
+
+    .products_filters{
+        display: flex;
+        flex-wrap: wrap;
+        gap:2em;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .products_content-grid{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:1em;
+    }
+
+    .footer_Section{
+        display: flex;
+        flex-wrap: wrap;
+        gap:1em;
+    }
+
+    .footer_copy{
+     width: 600px;
+    }
+
+
+    .nav_menu{
+        display: none;
+    }
+    .home__container{
+        width: 600px;
+    }
+
+    .home__container{
+        width: 600px;
+        flex-wrap:wrap ;
+        gap: 2em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home__img{
+        width: 400px;
+    }
+                    
+    
 }
