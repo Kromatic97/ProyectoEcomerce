@@ -39,10 +39,16 @@
     --z-fixed: 100;
 }
 
+body{
+    max-width: 950px;
+    padding: 2em;
+    
+}
+
 
 .contenedor_cabecera{
     position: fixed;
-    width: 100%;
+    width: 98%;
     height: 70px;
     top:0;
     padding: 5px;
@@ -50,13 +56,8 @@
     display: flex;
     gap:3em;
     justify-content: space-between;
-   
-   
-   
+    z-index: 300;
 }
-
-
-
 .logo{
     display: flex;
     justify-content: center;
@@ -120,13 +121,14 @@
 }
 /* barra lateral -- container shoping*/
 .sidebar_card{
+    padding-top: 20px ;
     width: 20%;
     height: 100vh;
     background-color: var(--body-color);
     position: fixed;
     top:0;
     right: 0;
-    z-index: 100;
+    z-index: 50;
     border-bottom-left-radius: 1em;
     border-top-left-radius: 1em;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -213,16 +215,19 @@
 }
 
 .home{
-    background-color: aqua;
+    
     width: 950px;
     margin-top: 90px;
+    
 }
 
 
 .home__container{
-background-color: aqua;
+
 display: flex;
 flex-direction: row-reverse;
+justify-content: space-between;
+align-items: center
 
 
 }
@@ -234,10 +239,12 @@ flex-direction: row-reverse;
 
 .home__data{
     background-color: var(--body-color);
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: space-evenly;
+    
 }
 
 .home__title{
@@ -552,7 +559,19 @@ gap:1em;
     }
 
     .home__img{
-        width: 400px;
+        width: 300px;
+        display: flex;
+       justify-content: left;
+    }
+
+    .home__container{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .show_sidebar_card{
+        margin-right: -100%;
     }
                     
     

@@ -75,25 +75,6 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
-
-
-
-
-
-//en clase se le llamo---> printFood()
-
-
-
-
-// const contentProducto=document.querySelector(".products_content-grid");
-
-
-// contentProducto.addEventListener("click",(event)=>{
-//     console.log(event.target);
-// })
-
-
-
 function agregarCardsProducts() {
 
 const products=document.querySelector(".products_content-grid");
@@ -102,11 +83,8 @@ const shoppingObj = {};
 
 products.addEventListener("click",(event)=>{
         if(event.target.classList.contains('products_button')){
-            const idProduct2=parseInt(event.target.parentElement.dataset.idproduct);
-            
-
+            const idProduct2=parseInt(event.target.parentElement.dataset.idproduct); 
             let currentProduct2=null;
-
             for (let i = 0; i < arrayProducts.length; i++) {
                if (arrayProducts[i].id=== parseInt(idProduct2)) {
                     currentProduct2=arrayProducts[i];  
@@ -126,7 +104,7 @@ products.addEventListener("click",(event)=>{
            const contentShoping=document.querySelector(".content_shoping")
            let html2='';
 
-           shoppingArray.forEach(({id, name, price, image,quantity, amount})=>{
+           shoppingArray.forEach(({id, name, price, image, quantity, amount})=>{
                     html2+=`<div class="shopping">
 
                             <div class="shopping_header">
@@ -178,6 +156,9 @@ for (let i = 0; i < arrayProducts.length; i++) {
 products.innerHTML=html;
     
 }
+
+
+
 
 function openAndCloseCards() {
     const sidebarCard=document.querySelector(".sidebar_card");//card_shopping
