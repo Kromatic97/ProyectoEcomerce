@@ -148,6 +148,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap:1em;
     
 }
 
@@ -435,10 +436,15 @@ width: 300px;
 
 
     /*Las cards pequenhas*/
-
-.rest, 
-.add,
 .del{
+    cursor: pointer;
+}
+
+.restar{
+    cursor: pointer;
+}
+
+.add{
     cursor: pointer;
 }
 
@@ -670,4 +676,8 @@ gap:1em;
     }
                     
     
+}
+
+ul{
+    list-style: none;
 }
