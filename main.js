@@ -8,6 +8,8 @@ const navMenuBoton=document.querySelector(".box_sale");//container_shpopping
 const contentShoping=document.querySelector(".content_shoping");
 
 const shoppingTotal=document.querySelector(".shoppingTotal");
+const btnComprar=document.querySelector("#btn_comprar")
+const amountSale=document.querySelector(".amountSale");
 
 const shoppingObj = {};
 
@@ -99,10 +101,9 @@ if (event.target.classList.contains("add_principal")) {
 });
 
 function amountProductInCard(){
-  const amountSale=document.querySelector(".amountSale");
+  // const amountSale=document.querySelector(".amountSale");
   amountSale.textContent = Object.values(shoppingObj).length;
 }
-
 
 function printTotalPrice(){
   const shoppingArray = Object.values(shoppingObj);
@@ -116,12 +117,6 @@ function printTotalPrice(){
 
 
 }
-
-
-
-
-
-
 
 function printShoppingCard() {
 
@@ -159,8 +154,6 @@ function printShoppingCard() {
   contentShoping.innerHTML=html;  
   }
 
-
-
 function printProduct() {
   let html = "";
   dataProducts.forEach(({id, name, price, image, quantity})=>{
@@ -192,6 +185,21 @@ printProduct();
 navMenuBoton.addEventListener("click", () => {
 sidebarCard.classList.toggle('show_sidebar_card')
 })
+
+
+btnComprar.addEventListener("click", () => {
+
+  // const res = confirm("Desea agregar el producto?")
+
+  // if(res){
+  //   shoppingTotal.textContent=0;
+  //   amountSale.textContent = 0;
+
+  // }
+
+})
+
+
 
 
 
