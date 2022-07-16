@@ -101,7 +101,7 @@ if (event.target.classList.contains("add_principal")) {
 });
 
 function amountProductInCard(){
-  // const amountSale=document.querySelector(".amountSale");
+  const amountSale=document.querySelector(".amountSale");
   amountSale.textContent = Object.values(shoppingObj).length;
 }
 
@@ -188,29 +188,11 @@ sidebarCard.classList.toggle('show_sidebar_card')
 
 
 btnComprar.addEventListener("click", () => {
-  const res = confirm("Desea agregar el producto?")
 
-    if(res){
-      const shopping = Objet.entries(shoppingObj);
-      const res = dataProducts.map((element) => {
-        for (let i = 0; i < shopping .length; i++) {
-          if (element.id==shopping[i][0]){
-            return {
-              ...element,
-              quantity:element.quantity - shopping[i][1].amount,
-            };
-          }else{
-            return element;
-          }
+  shoppingTotal.textContent=0;
+  amountSale.textContent = 0;
 
-        }
-      });
-
-    shoppingTotal.textContent=0;
-    amountSale.textContent = 0;
-
-  }
-});
+})
 
 
 
