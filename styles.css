@@ -348,38 +348,133 @@ font-family: var(--body-font);
 
 /* ================las cards======================= */
 
-.products_content-grid{
-    padding-top: 20px;
-    padding-bottom: 20px;
 
+.contenedorImg{
+width: 300px;
+}
+
+.contenedorImg img {
+    width: 100%;
+}
+
+.products_content-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
-    justify-items: center;
-    align-items: center;
-    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+   
+}
+
+.products_data{
+    padding-top: 1em;
+   
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
     
 }
 
-.products_card{
+.product_action{
+    background-color: red;
+    position: relative;
+}
+
+.add_principal{
+    position: absolute;
+    top:-90px;
+    left:200px;
+    background-color:var(--body-color);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.9s, transform 0.5s;
+    outline: none;
+    font-family:var(--body-font);
+    font-size:1.5em;
+}
+
+
+.products_button{
+    position: absolute;
+    
+    top: -20px;
+    right: 20px;
+    
+    
+    }
+    .add_principal:hover{
+        background-color: var(--first-color);
+        color: #fff;  
+        opacity: 0.9;
+    }
+    
+    .add_principal:active{
+        transform: scale(0.9);  
+    }
+    
+    .products_price{
+        padding-left: 1em;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: var(--body-font);
+    }
+    
+    .products_price p{
+        font-family: var(--body-font);
+        font-size:var(--smaller-font-size)
+    }
+    
+    .products_name{
+        padding-left: 1em;
+        font-family: var(--body-font);
+
+    }
+
+
+    /*Las cards pequenhas*/
+
+.rest, 
+.add,
+.del{
+    cursor: pointer;
+}
+
+
+
+
+/* /* .products_card{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+   
+    align-items: center;
+    gap: 1em;
     background-color: var(--text-color-light);
     border-radius: 10px;
 }
 
 .products_card:hover .products_img{
     transform: translateY(-.25rem);
-}
+} */
 
 
-.products_shape{
-    width: 250px;
+/* 
+.contenedorImg{
+    width: 350px;
     border-radius: 10px;
-    padding: 2em;     
+    padding: 2em;  
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
 }
-
 .products_img{
     margin-top: 1em;
-    width: 100%;  
+    width: 50%;  
     transition: all 1s;  
 }
 
@@ -438,7 +533,7 @@ font-size:1.5em;
 .products_name{
     padding-left: 1em;
     font-family: var(--body-font);
-}
+} */ */
 
 
 
