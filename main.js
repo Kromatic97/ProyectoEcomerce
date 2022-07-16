@@ -188,16 +188,29 @@ sidebarCard.classList.toggle('show_sidebar_card')
 
 
 btnComprar.addEventListener("click", () => {
+  const res = confirm("Desea agregar el producto?")
 
-  // const res = confirm("Desea agregar el producto?")
+    if(res){
+      const shopping = Objet.entries(shoppingObj);
+      const res = dataProducts.map((element) => {
+        for (let i = 0; i < shopping .length; i++) {
+          if (element.id==shopping[i][0]){
+            return {
+              ...element,
+              quantity:element.quantity - shopping[i][1].amount,
+            };
+          }else{
+            return element;
+          }
 
-  // if(res){
-  //   shoppingTotal.textContent=0;
-  //   amountSale.textContent = 0;
+        }
+      });
 
-  // }
+    shoppingTotal.textContent=0;
+    amountSale.textContent = 0;
 
-})
+  }
+});
 
 
 
